@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+\setlength{\parindent}{0in}
+\usepackage{booktabs}
+\usepackage{dsfont}
+\usepackage{float}
+\usepackage{amssymb}
+
+\title{Problem Sheet \#3}
+\author{Aayush Sharma Acharya}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \textbf{Problem 3.1: } \textit{Distributive laws for sets}\\
+
+    Let A, B and C be sets. Proof that the following two distributive laws hold:
+
+    $$ \textit{A} \cup (\textit{B} \cap \textit{C}) = ( \textit{A} \cup \textit{B} ) \cap ( \textit{A} \cup \textit{C} )$$
+    \begin{center}
+        and,
+    \end{center}
+    $$ \textit{A} \cap (\textit{B} \cup \textit{C}) = ( \textit{A} \cap \textit{B} ) \cup ( \textit{A} \cap \textit{C} )$$
+
+    \textit{Solution},
+
+    \indent Let \textit{P} and \textit{Q} be any two sets:
+
+    Now,
+
+    $$\textit{P} \cup \textit{Q} := \{ x: x \in \textit{P} \  or\  \textit{x} \in \textit{Q} \}$$
+
+    And,
+    $$\textit{P} \cap \textit{Q} := \{ x: x \in \textit{P} \ and\  \textit{x} \in \textit{Q} \}$$
+
+    Let T be the event when an element \textit{x} is present in the set.
+    \begin{center}
+        and
+    \end{center}
+
+    F be the event when an element \textit{x} is NOT present in the set.
+
+    Recalling the definition of $\textit{P} \cap \textit{Q}$ and $\textit{P} \cup \textit{Q}$, we can construct a table in order to prove the relation:
+    $$\textit{A} \cup (\textit{B} \cap \textit{C}) = ( \textit{A} \cup \textit{B} ) \cap ( \textit{A} \cup \textit{C} )$$
+    \begin{table}[H]
+        \begin{center}
+            \begin{tabular}{| l | l | l | l | l | l | l | l |}
+                \midrule
+                \textit{A}& \textit{B}& \textit{C} & $\textit{A} \cup \textit{B}$ & $\textit{A} \cup \textit{C}$ & \textbf{$(\textit{A} \cup \textit{B}) \cap (\textit{A} \cup \textit{C})$} & $\textit{B} \cap \textit{C}$ & \textbf{$\textit{A} \cup (\textit{B} \cap \textit{C})$}\\
+                \midrule\midrule
+                T & T & T & T & T & \textbf{T} & T & \textbf{T}\\
+                \midrule
+                T & T & F & T & T & \textbf{T} & F & \textbf{T}\\
+                \midrule
+                T & F & T & T & T & \textbf{T} & F & \textbf{T}\\
+                \midrule
+                T & F & F & T & T & \textbf{T} & F & \textbf{T}\\
+                \midrule
+                F & T & T & T & T & \textbf{T} & T & \textbf{T}\\
+                \midrule
+                F & T & F & T & F & \textbf{F} & F & \textbf{F}\\
+                \midrule
+                F & F & T & F & T & \textbf{F} & F & \textbf{F}\\
+                \midrule
+                F & F & F & F & F & \textbf{F} & F & \textbf{F}\\
+                \midrule
+            \end{tabular}
+        \end{center}
+    \end{table}
+    Here in this table we have generated a full list of possible events when \textit{x} is present and not present in both set \textit{A} and \textit{B} and we have found that the events in $( \textit{A} \cup \textit{B} ) \cap ( \textit{A} \cup \textit{C} )$ and $\textit{A} \cup (\textit{B} \cap \textit{C})$ are equivalent.
+    This says that the distributive laws hold for the following:
+    $$ \textit{A} \cup (\textit{B} \cap \textit{C}) = ( \textit{A} \cup \textit{B} ) \cap ( \textit{A} \cup \textit{C} )$$
+    Using the same method we can construct another table for the following:
+    $$ \textit{A} \cap (\textit{B} \cup \textit{C}) = (\textit{A} \cap \textit{B}) \cup (\textit{A} \cap \textit{C}) $$
+
+    \begin{table}[H]
+        \begin{center}
+            \begin{tabular}{| l | l | l || l | l | l | l | l |}
+                \midrule
+                \textit{A}& \textit{B}& \textit{C} & $\textit{A} \cap \textit{B}$ & $\textit{A} \cap \textit{C}$ & \textbf{$(\textit{A} \cap \textit{B}) \cup (\textit{A} \cap \textit{C})$} & $\textit{B} \cup \textit{C}$ & \textbf{$\textit{A} \cap (\textit{B} \cup \textit{C})$}\\
+                \midrule\midrule
+                T & T & T & T & T & \textbf{T} & T & \textbf{T}\\
+                \midrule
+                T & T & F & T & F & \textbf{T} & T & \textbf{T}\\
+                \midrule
+                T & F & T & F & T & \textbf{T} & T & \textbf{T}\\
+                \midrule
+                T & F & F & F & F & \textbf{F} & F & \textbf{F}\\
+                \midrule
+                F & T & T & F & F & \textbf{F} & T & \textbf{F}\\
+                \midrule
+                F & T & F & F & F & \textbf{F} & T & \textbf{F}\\
+                \midrule
+                F & F & T & F & F & \textbf{F} & T & \textbf{F}\\
+                \midrule
+                F & F & F & F & F & \textbf{F} & F & \textbf{F}\\
+                \midrule
+            \end{tabular}
+        \end{center}
+    \end{table}
+    In this table we have generated a full list of possible events when \textit{x} is present and not present in both set \textit{A} and \textit{B} and we have found that the events in $( \textit{A} \cap \textit{B} ) \cup ( \textit{A} \cap \textit{C} )$ and $\textit{A} \cap (\textit{B} \cup \textit{C})$ are equivalent.
+    This, also, says that the distributive laws hold for the following:
+    $$ \textit{A} \cap (\textit{B} \cup \textit{C}) = ( \textit{A} \cap \textit{B} ) \cup ( \textit{A} \cap \textit{C} )$$\\
+
+
+    \textbf{Problem 3.2: } \textit{reflexive, symmetric and transitive}
+
+    For each of the following relations, determine whether they are reflexive, symmetric, or transitive.Provide a reasoning.\\
+
+    a) $\mathds{R} = \{(\textit{a},\textit{b}) | \textit{a}, \textit{b} \in \mathds{Z} \wedge \textit{a} \neq  \textit{b} \}$\\
+
+    $\textit{a} \neq \textit{a}$ is not true hence it is not reflexive.
+
+    If $\textit{a} \neq \textit{b}$ is true then $\textit{b} \neq \textit{a} $ is also true. Hence it is symmetric.
+
+    If $ \textit{a} \neq \textit{b}$ is true and assume $ \textit{b} \neq \textit{c}$ is true, then $ \textit{a} \neq \textit{c}$ may or may not be true. So it is not transitive.\\
+
+    b) $\mathds{R} = \{(\textit{a},\textit{b}) | \textit{a}, \textit{b} \in \mathds{Z} \wedge |\textit{a} - \textit{b} | \leq 3  \}$\\
+
+    $ |\textit{a} - \textit{a} | \leq 3$ and $ |\textit{b} - \textit{b} | \leq 3$ is true, hence it is reflexive.
+
+    If  $ |\textit{a} - \textit{b} | \leq 3$ is true, then  $ |\textit{b} - \textit{a} | \leq 3$ is also true. So it is also symmetric.
+
+    If $ |\textit{a} - \textit{b} | \leq 3$ and lets assume that $ |\textit{b} - \textit{c} | \leq 3$, then $ |\textit{a} - \textit{c} | \leq 3$ may be greater than or less than 3 or sometimes equals to 3. Hence it is not transitive.\\
+
+    c) $\mathds{R} = \{(\textit{a},\textit{b}) | \textit{a}, \textit{b} \in \mathds{Z} \wedge (\textit{a}\ mod\ 10) = (\textit{b}\ mod\ 10) \}$\\
+
+    $(\textit{a}\ mod\ 10) = (\textit{a}\ mod\ 10)$ is always true and $(\textit{b}\ mod\ 10) = (\textit{b}\ mod\ 10)$ is also always true. Therefore, it is reflexive.
+
+    If $(\textit{a}\ mod\ 10) = (\textit{b}\ mod\ 10)$ is True, then $(\textit{b}\ mod\ 10) = (\textit{a}\ mod\ 10)$ is also True. Hence, it is also symmetric.
+
+    It also transitive because if $(\textit{a}\ mod\ 10) = (\textit{b}\ mod\ 10)$ and $(\textit{b}\ mod\ 10) = (\textit{c}\ mod\ 10)$ then, the relation $(\textit{a}\ mod\ 10) = (\textit{c}\ mod\ 10)$ is also true.\\
+
+
+    \textbf{Problem 3.3:} \textit{Circular prime numbers (haskell)}
+
+    \begin{center}
+        Source code is also included in the zip file.
+    \end{center}
+
+    a) Implement a function \textbf{prime :: Integer -\textgreater\ Bool} that returns a Bool value indicating whether the Integer argument is a prime number or not.
+
+    \begin{verbatim}
+        prime :: Integer -> Bool
+        prime n = length [x | x <- [1..n], n `mod` x == 0] == 2
+    \end{verbatim}
+
+    This function takes a number \textit{n} and finds its remainder by dividing it from \textit{1 to n}. For example \textit{n} = 92, It would look like:
+
+
+    \begin{verbatim}
+        91 `mod` 1  = 0
+        91 `mod` 2  = 1
+        91 `mod` 3  = 1
+        91 `mod` 4  = 3
+        .   .    .    .
+        .   .    .    .
+        .   .    .    .
+        91 `mod` 91 = 0
+    \end{verbatim}
+
+    This would generate all the possible factors of \textit{n}. Then it would filter the list of numbers which has only 2 factors (which is why I used the length function). The number which has only 2 factors (1 and number itself) is called the prime number.
+
+    We can test the validity of our function by:
+    \begin{verbatim}
+     > prime 2
+     True
+    > filter prime [2..100]
+[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]
+    \end{verbatim}
+
+    b) Using the prime function, implement a function \textbf{circprime :: Integer -\textgreater Bool} that returns
+    a \textbf{Bool} value indicating whether the Integer value is a circular prime number or not.
+
+    \begin{verbatim}
+        circprime :: Integer -> Bool
+        circprime n =
+                length [z | z <- [prime y |
+                            y <- [read x :: Integer |
+                            x <- circle (show n)]],
+                    z == True]
+                    == length (circle (show n))
+    \end{verbatim}
+
+    First of all the function \textbf{circprime} accepts a number \textbf{\textit{n}} and then converts it to string using \textbf{show} function. After it is converted it is then passed to \textbf{circle} function which I had written from the previous assignment.The circle function provides me with all the cyclic orders of the string. After all the orders of the string are returned in an array, I convert each combination string in the array to numbers and pass it to function \textbf{prime} which I had written earlier. It returns a list of True and False which denotes that combination of number is a prime number or not. If the list contains True values that is equal to the length of \textbf{(circle (show \textit{n}))}, that prime number is circular.
+\end{document}
